@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+}
+
+.navbar {
+    background-color: #0d0d0d; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625em 1.25em;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.25em;
+    padding: 0.3125em; 
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    color: black;
+    background-color: white;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.logo {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+@media screen and (max-width: 48em) { 
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links a {
+        margin-bottom: 0.625em;
+    }
+}
