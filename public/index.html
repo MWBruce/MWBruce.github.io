@@ -5,20 +5,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MWB Website</title>
     <link rel="stylesheet" href="/stylesheets/homepage.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="javascripts/homepage.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">MWB</div>
-            <div class="nav-links">
-                <a href="#contact">Contact</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
+    <div id="app">
+        <header>
+            <nav class="navbar">
+                <a href="/" class="logo-link">
+                    <div class="logo" @click="showHomePage">MWB</div>
+                </a>
+                <div class="nav-links">
+                    <a href="#" @click="showAboutInfo">About</a>
+                    <a href="#" @click="showProjectInfo">Projects</a>
+                    <a href="#" @click="showContactInfo">Contact</a>
+                </div>
+            </nav>
+        </header>
+        <div class="falling-pixels">
+            <div class="pixel" id="pixel1"></div>
+            <div class="pixel" id="pixel2"></div>
+            <div class="pixel" id="pixel3"></div>
+        </div>
+        <div class="details">
+            <div class="introduction" v-if="showIntroduction">
+                <div class="profile-container">
+                    <div class="profile-image">
+                        <img src="/images/Myself.jpg" alt="Profile Image">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="greeting">Hello, I'm </h1>
+                        <h1 class="title" v-html="typedTitle">\n</h1>
+                        <br>
+                        <p>Welcome to my website! Here, you'll find detailed insights into my professional journey, including an overview of my public projects, experience, community involvement, and achievements in computer science. Should you wish to connect, please don't hesitate to reach out through the "Contact Me" button below!</p>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <div class="outside-container">
+                        <a href="#" class="pill-button" id="contactButton" @click="showContactInfo">Contact Me</a>
+                    </div>
+                    <div class="outside-container">
+                        <a href="/downloads/Resume.pdf" class="pill-button" download="My_Resume.pdf">Download CV</a>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </header>
-
-    
-
+            <div class="contactInformation" v-if="showContactStatus">
+                <h2 class="content-header">Contact Information</h2>
+                <div class="links">
+                    <h3>Links:</h3>
+                    <div class="button-container">
+                        <div class="outside-container">
+                            <a href="https://www.linkedin.com/in/maxwell-bruce-b0a0771b1/" target="_blank" class="pill-button">LinkedIn</a>
+                        </div>
+                        <div class="outside-container">
+                            <a href="https://github.com/MWBruce" target="_blank" class="pill-button">Professional GitHub</a>
+                        </div>
+                        <div class="outside-container">
+                            <a href="https://github.com/A1766106" target="_blank" class="pill-button">Student GitHub</a>
+                        </div>
+                    </div> 
+                </div>
+                <div class="emails">
+                    <h3>Email:</h3>
+                    <p>MaxwellWallaceBruce@gmail.com</p>
+                </div>
+            </div>
+            <div class="aboutInformation" v-if="showAboutStatus">
+                <h2 class="content-header">About Me</h2>
+            
+                <section class="about-section left-image">
+                    <img src="/images/Myself.jpg" class="about-image">
+                    <div class="about-text">
+                        <h3>Work Experience:</h3>
+                        <ul>
+                            <li>
+                                <strong>Intern Modelling and Analysis Engineer (Software Engineer)</strong> - SAAB (11/2023-Present):
+                                <br>
+                                <ul v-if="saabShow">
+                                    <li>Developed and validated models to simulate and analyse defence systems.</li>
+                                    <li>Utilized various machine learning algorithms.</li>
+                                    <li>Used various basic electrical engineering principles.</li>
+                                </ul>
+                                <div class="about-button-container">
+                                    <div class="outside-container smaller-outside-container" v-if="!saabShow">
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="saabShowButton">Show More Information</a>
+                                    </div>
+                                    <div class="outside-container smaller-outside-container" v-if="saabShow">
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="saabShowButton">Close</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Machine Learning Researcher</strong> - Australian Institute for Machine Learning (4/2023-Present):
+                                <br>
+                                <ul v-if="aimlShow">
+                                    <li>Researched various machine learning algorithms.</li>
+                                    <li>Projects worked on included SVM’s, Large Language Models, and Neural Networks.</li>
+                                </ul>
+                                <div class="about-button-container">
+                                    <div class="outside-container smaller-outside-container" v-if="!aimlShow">
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="aimlShowButton">Show More Information</a>
+                                    </div>
+                                    <div class="outside-container smaller-outside-container" v-if="aimlShow">
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="aimlShowButton">Close</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong>Accountant</strong> - RJC Evans & Co Pty Ltd (4/2020–4/2023):
+                                <br>
+                                <ul  v-if="rjcShow">
+                                    <li>Prepared Income Tax Returns and Financial Statements.</li>
+                                    <li>Corresponded with Clients.</li>
+                                    <li>Conducted Audits.</li>
+                                </ul>
+                                <div class="about-button-container">
+                                    <div class="outside-container smaller-outside-container" v-if="!rjcShow">
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="rjcShowButton">Show More Information</a>
+                                    </div>
+                                    <div class="outside-container smaller-outside-container" v-if="rjcShow">
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="rjcShowButton">Close</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            
+                <section class="about-section right-image">
+                    <div class="about-text">
+                        <h3>Education:</h3>
+                        <ul>
+                            <li>University of Adelaide - Bachelor of Computer Science with Honours – Graduating June 2025</li>
+                            <li>University of Adelaide – Bachelor of Commerce with major in Accounting and Corporate Finance – Complete</li>
+                            <li>Stanford University and DeepLearning.AI – Machine Learning Specialization Course</li>
+                            <li>DeepLearning.AI – Deep Learning Specialization Course</li>
+                            <li>St Peters College – High School</li>
+                        </ul>
+                    </div>
+                    <img src="/images/CPC.jpg" class="about-image">
+                </section>
+            
+                <section class="about-section left-image">
+                    <img src="/images/Meeting.jpg" class="about-image">
+                    <div class="about-text">
+                        <h3>Achievements:</h3>
+                        <ul>
+                            <li>Adelaide University - Summer Research Scholarship</li>
+                        </ul>
+                    </div>
+                </section>
+            
+                <section class="about-section right-image">
+                    <div class="about-text">
+                        <h3>Community Involvements:</h3>
+                        <ul>
+                            <li>Treasurer/Committee Member – Competitive Programming Society (Adelaide University)</li>
+                            <li>Student – Ravi’s Study Program</li>
+                            <li>Player – Adelaide University Football Club</li>
+                            <li>Competitor - Competitive Programming Society (Adelaide University)</li>
+                            <li>Member - Adelaide Computer Science Club</li>
+                        </ul>
+                    </div>
+                    <img src="/images/CommitteePhoto.jpg" class="about-image">
+                </section>
+            
+                <section class="about-section left-image">
+                    <img src="/images/Football.jpeg" class="about-image">
+                    <div class="about-text">
+                        <h3>Interests:</h3>
+                        <ul>
+                            <li>Competitive Programming</li>
+                            <li>Machine Learning</li>
+                            <li>Exercise</li>
+                            <li>Football</li>
+                            <li>Anything to do with the beach</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            
+            <div class="projectInformation" v-if="showProjectStatus">
+                <ul class="projects-list">
+                    <li class="project">
+                        <div class="project-card">
+                            <img src="/images/portfolioIcon.jpg" alt="Portfolio Website Icon" class="project-image">
+                            <div class="project-details">
+                                <h4 class="project-title">My Portfolio Website</h4>
+                                <p class="project-description">A simple portfolio website showcasing myself.</p>
+                                <a href="https://github.com/MWBruce/PortfolioWebsite" target="_blank" class="project-link">GitHub Link</a>
+                                <p class="project-language">Language Used: HTML, CSS, JavaScript, Vue.js and Node.js</p>
+                                <span class="project-status complete">Complete</span>
+                            </div>
+                        </div>
+                    </li>                    
+                    <li class="project">
+                        <div class="project-card">
+                            <img src="/images/JenkinsIcon.png" alt="Jenkins DORA Plugin Icon" class="project-image">
+                            <div class="project-details">
+                                <h4 class="project-title">Jenkins DORA Plugin</h4>
+                                <p class="project-description">A team project creating a plugin for Jenkins that collects all DORA metrics for development teams through the creation of a pipeline and integration of SAST tool.</p>
+                                <a href="https://github.com/BarrettBytes/DORAAndSASTMetricJenkinsPlugin" target="_blank" class="project-link">GitHub Link</a>
+                                <p class="project-language">Language Used: Java, Python, Pipeline DSL, Shell Script, PromQL and AWS CloudFormation</p>
+                                <span class="project-status inprogress">In Progress</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project-card">
+                            <img src="/images/pricePredictorIcon.png" alt="Price Predictor Icon" class="project-image">
+                            <div class="project-details">
+                                <h4 class="project-title">Neural Network Price Predictor</h4>
+                                <p class="project-description">A ML project which without using any machine learning libraries creates a neural network to predict the prices of shares based on quarterly reports. I am currently implementing better consideration of industries in predictions.</p>
+                                <a href="https://github.com/MWBruce/MachineLearningStockPricePrediction" target="_blank" class="project-link">GitHub Link</a>
+                                <p class="project-language">Language Used: Python</p>
+                                <span class="project-status inprogress">In Progress</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project-card">
+                            <img src="/images/webScraperIcon.jpg" alt="Web Scraper Icon" class="project-image">
+                            <div class="project-details">
+                                <h4 class="project-title">Web Scraper for Stock Prices</h4>
+                                <p class="project-description">A aspect of what is planned to be a bigger project in which data is scraped quickly and efficiently on defined intervals.</p>
+                                <a href="https://github.com/MWBruce/MachineLearningStockPricePrediction" target="_blank" class="project-link">GitHub Link</a>
+                                <p class="project-language">Language Used: C++</p>
+                                <span class="project-status complete">Complete</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project-card">
+                            <img src="/images/shareSimIcon.jpg" alt="Share Simulator Icon" class="project-image">
+                            <div class="project-details">
+                                <h4 class="project-title">Historical Share Simulator</h4>
+                                <p class="project-description">A project where a user through terminal prompts can buy and sell shares based on real historical data.</p>
+                                <a href="https://github.com/A1766106/ShareSimCombination" target="_blank" class="project-link">GitHub Link</a>
+                                <p class="project-language">Language Used: C++</p>
+                                <span class="project-status complete">Complete</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>
