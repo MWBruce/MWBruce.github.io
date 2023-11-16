@@ -12,6 +12,7 @@
 <body>
     <div id="app">
         <header>
+            <!-- Navigation bar -->
             <nav class="navbar">
                 <a href="/" class="logo-link">
                     <div class="logo" @click="showHomePage">MWB</div>
@@ -23,12 +24,15 @@
                 </div>
             </nav>
         </header>
+        <!-- Falling Pixel Effect  -->
         <div class="falling-pixels">
             <div class="pixel" id="pixel1"></div>
             <div class="pixel" id="pixel2"></div>
             <div class="pixel" id="pixel3"></div>
         </div>
+        <!-- Div Holding all content regarding myself -->
         <div class="details">
+            <!-- Homepage div -->
             <div class="introduction" v-if="showIntroduction">
                 <div class="profile-container">
                     <div class="profile-image">
@@ -50,6 +54,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Contact information div -->
             <div class="contactInformation" v-if="showContactStatus">
                 <h2 class="content-header">Contact Information</h2>
                 <div class="links">
@@ -71,6 +76,7 @@
                     <p>MaxwellWallaceBruce@gmail.com</p>
                 </div>
             </div>
+            <!-- About information div -->
             <div class="aboutInformation" v-if="showAboutStatus">
                 <h2 class="content-header">About Me</h2>
             
@@ -87,6 +93,7 @@
                                     <li>Utilized various machine learning algorithms.</li>
                                     <li>Used various basic electrical engineering principles.</li>
                                 </ul>
+                                <!-- Buttons to show and hide additional information -->
                                 <div class="about-button-container">
                                     <div class="outside-container smaller-outside-container" v-if="!saabShow">
                                         <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="saabShowButton">Show More Information</a>
@@ -103,6 +110,7 @@
                                     <li>Researched various machine learning algorithms.</li>
                                     <li>Projects worked on included SVM’s, Large Language Models, and Neural Networks.</li>
                                 </ul>
+                                <!-- Buttons to show and hide additional information -->
                                 <div class="about-button-container">
                                     <div class="outside-container smaller-outside-container" v-if="!aimlShow">
                                         <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="aimlShowButton">Show More Information</a>
@@ -120,6 +128,7 @@
                                     <li>Corresponded with Clients.</li>
                                     <li>Conducted Audits.</li>
                                 </ul>
+                                <!-- Buttons to show and hide additional information -->
                                 <div class="about-button-container">
                                     <div class="outside-container smaller-outside-container" v-if="!rjcShow">
                                         <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="rjcShowButton">Show More Information</a>
@@ -185,7 +194,7 @@
                     </div>
                 </section>
             </div>
-            
+            <!-- Projects div -->
             <div class="projectInformation" v-if="showProjectStatus">
                 <ul class="projects-list">
                     <li class="project">
