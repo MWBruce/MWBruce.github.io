@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.typeWriter();
         },
         methods: {
+            // Makes text on home page move
             typeWriter() {
                 if (!this.isDeleting) {
                     if (this.typedTitle.includes("<br>")) {
