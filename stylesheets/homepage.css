@@ -417,11 +417,11 @@ body {
     }
     .profile-container, .about-section {
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
     }
 
     .about-text, .project-details {
         flex-grow: 1;
-        text-align: center;
+        /* text-align: center; */
     }
 }
