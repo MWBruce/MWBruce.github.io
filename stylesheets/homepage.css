@@ -262,13 +262,20 @@ body {
     margin: 0 auto; 
 }
 
-.content-header, .contactInformation div h3 {
+.content-header {
     text-align: center;
     width: 100%;
     background: linear-gradient(to right, #2CDD0D, #F1FAC0);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+.contactInformation div h3 {
+    text-align: center;
+    width: 100%;
+    color: #F1FAC0;
+    font-size: 1.2em; 
 }
 
 .contactInformation div {
@@ -414,11 +421,6 @@ body {
 
 #no-effect-title {
     display: none;
-}
-
-.links h3 {
-    color: #F1FAC0;
-    font-size: 1.2em; 
 }
 
 @media screen and (max-width: 768px) {
