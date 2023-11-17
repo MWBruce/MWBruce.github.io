@@ -457,7 +457,7 @@ body {
     #no-effect-title {
         display: block; 
     }
-    .emails h3 {
+    .emails p {
         text-align: center;
     }
 }
