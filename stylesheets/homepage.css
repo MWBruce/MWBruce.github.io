@@ -327,7 +327,7 @@ body {
     max-width: 300px; 
     min-height: 300px;
     min-width: 300px;
-    margin: 0 20px;
+    /* margin: 0 20px; */
     border-radius: 10%;
 }
 
