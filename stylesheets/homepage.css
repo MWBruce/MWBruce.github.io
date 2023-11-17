@@ -43,6 +43,7 @@ body {
     background-clip: text;
     color: transparent; 
     display: inline-block; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .logo:hover {
