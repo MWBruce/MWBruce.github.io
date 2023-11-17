@@ -443,8 +443,7 @@ body {
         font-size: 1em;
     }
     .project-card {
-        padding-bottom: 25px;
-        background-color: #1a1a1a;
+        padding-bottom: 3em;
         border-radius: 15%;
         width: 100%;
     }
@@ -461,7 +460,4 @@ body {
     #no-effect-title {
         display: block; 
     }
-    /* .details {
-        width: 90%; 
-    } */
 }
