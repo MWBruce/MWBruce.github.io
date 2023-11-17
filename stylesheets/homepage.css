@@ -436,4 +436,9 @@ body {
     .greeting h1 {
         font-size: 1em;
     }
+    .project-title {
+        color: #F1FAC0;
+        margin: 0 0 10px 0;
+        font-size: 1em;
+    }
 }
