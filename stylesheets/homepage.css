@@ -445,4 +445,7 @@ body {
 
         padding-bottom: 25px;
     }
+    .details {
+        width: 90%; 
+    }
 }
