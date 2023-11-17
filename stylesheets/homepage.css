@@ -416,17 +416,13 @@ body {
     background-color: orange;
 }
 
-img {
-    display: none;
-}
-
 @media screen and (max-width: 768px) {
     img {
         display: none;
     }
-    /* .profile-container, .about-section {
+    .profile-container, .about-section {
         flex-direction: column;
-    } */
+    }
 
     .about-text, .project-details {
         flex-grow: 1;
@@ -453,5 +449,8 @@ img {
     .about-section {
         border-radius: 10%;
         background-color: #1a1a1a;
+    }
+    .about-text h3 {
+        align-self: left;
     }
 }
