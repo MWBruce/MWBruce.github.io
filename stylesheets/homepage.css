@@ -431,10 +431,10 @@ body {
         margin: 0 0px;
     }
     .title h1 {
-        font-size: 1.5em;
+        font-size: 1em;
     }
     .greeting h1 {
-        font-size: 1em;
+        font-size: 0.8em;
     }
     .project-title {
         color: #F1FAC0;
@@ -442,10 +442,11 @@ body {
         font-size: 1em;
     }
     .project-card {
-
+        background-color: #1a1a1a;
         padding-bottom: 25px;
     }
-    .project-card {
+    .about-section {
+        border-radius: 10%;
         background-color: #1a1a1a;
     }
 }
