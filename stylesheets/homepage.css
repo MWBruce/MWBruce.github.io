@@ -449,7 +449,7 @@ body {
         width: 100%;
     }
 
-    .project-information {
+    .projectInformation {
         width: 90%;
     }
     .about-text h3 {
@@ -461,4 +461,7 @@ body {
     #no-effect-title {
         display: block; 
     }
+    /* .details {
+        width: 90%; 
+    } */
 }
