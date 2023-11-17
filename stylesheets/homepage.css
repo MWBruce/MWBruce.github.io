@@ -419,11 +419,11 @@ body {
     img {
         display: none;
     }
-    /* .profile-container, .about-section {
+    .profile-container, .about-section {
         flex-direction: column;
     }
 
-    .about-text, .project-details {
+    /* .about-text, .project-details {
         flex-grow: 1;
     } */
 }
