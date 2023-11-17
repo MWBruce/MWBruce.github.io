@@ -444,9 +444,11 @@ body {
     }
     .project-card {
         padding-bottom: 25px;
+        background-color: #1a1a1a;
+        border-radius: 15%;
     }
     .about-text h3 {
-        align-self: left;
+        text-align: left;
     }
     #effect-title {
         display: none;
