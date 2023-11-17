@@ -40,7 +40,8 @@
                     </div>
                     <div class="profile-info">
                         <h1 class="greeting">Hello, I'm </h1>
-                        <h1 class="title" v-html="typedTitle">\n</h1>
+                        <h1 class="title" id="effect-title" v-html="typedTitle">\n</h1>
+                        <h1 class="title" id="no-effect-title">Maxwell Bruce</h1>
                         <br>
                         <p>Welcome to my website! Here, you'll find detailed insights into my professional journey, including an overview of my public projects, experience, community involvement, and achievements in computer science. Should you wish to connect, please don't hesitate to reach out through the "Contact Me" button below!</p>
                     </div>
@@ -78,7 +79,7 @@
             </div>
             <!-- About information div -->
             <div class="aboutInformation" v-if="showAboutStatus">
-                <h2 class="content-header">About Me</h2>
+                <h2 class="content-header">About Me2</h2>
             
                 <section class="about-section left-image">
                     <img src="/images/Myself.jpg" class="about-image">

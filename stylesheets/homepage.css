@@ -101,7 +101,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; 
-    /* margin: 20px auto;      */
 }
 
 .details {
@@ -413,6 +412,10 @@ body {
     background-color: orange;
 }
 
+#no-effect-title h1 {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     img {
         display: none;
@@ -440,14 +443,15 @@ body {
         font-size: 1em;
     }
     .project-card {
-        background-color: #1a1a1a;
         padding-bottom: 25px;
-    }
-    .about-section {
-        border-radius: 10%;
-        background-color: #1a1a1a;
     }
     .about-text h3 {
         align-self: left;
+    }
+    #no-effect-title h1 {
+        display: block;
+    }
+    #effect-title h1 {
+        display: none;
     }
 }
