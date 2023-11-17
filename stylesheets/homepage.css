@@ -101,7 +101,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; 
-    margin: 20px auto;     
+    /* margin: 20px auto;      */
 }
 
 .details {
@@ -112,7 +112,7 @@ body {
     border-radius: 10px;
     padding: 1.5em;
     color: white;
-    margin: auto;
+    /* margin: auto; */
     margin-top: 1.5em;
     max-width: 800px;
 }
