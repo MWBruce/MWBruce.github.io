@@ -426,6 +426,10 @@ body {
     .about-text, .project-details {
         flex-grow: 1;
     }
+
+    .about-image {
+        margin: 0 0px;
+    }
     .title h1 {
         font-size: 1.5em;
     }
