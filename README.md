@@ -1,5 +1,3 @@
 # PortfolioWebsite
 
-To Run:
-1. npm install 
-2. npm run start
+Simple website although originally written using Node.js has been adapted to run on GitHub.
