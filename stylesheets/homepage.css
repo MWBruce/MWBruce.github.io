@@ -43,7 +43,6 @@ body {
     background-clip: text;
     color: transparent; 
     display: inline-block; 
-    transition: background-image 0.5s ease;
 }
 
 .logo:hover {
@@ -217,7 +216,7 @@ body {
     width: 70%; 
     align-items: center;
     justify-content: center; 
-    padding: 1.5em;
+    /* padding: 1.5em; */
     color: white;
     margin: auto;
     display: flex;
