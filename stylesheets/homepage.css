@@ -412,7 +412,7 @@ body {
     background-color: orange;
 }
 
-#no-effect-title h1 {
+#no-effect-title {
     display: none;
 }
 
@@ -448,10 +448,11 @@ body {
     .about-text h3 {
         align-self: left;
     }
-    #no-effect-title h1 {
-        display: block;
-    }
-    #effect-title h1 {
+    #effect-title {
         display: none;
+    }
+
+    #no-effect-title {
+        display: block; 
     }
 }
