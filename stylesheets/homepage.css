@@ -284,7 +284,7 @@ body {
     justify-content: center;
     width: 100%;
     background-color: transparent;
-    padding: 1.5em;
+    /* padding: 1.5em; */
     color: white;
 }
 
@@ -332,8 +332,8 @@ body {
 }
 
 .about-text {
-    /* flex: 2;
-    text-align: left; */
+    flex: 2;
+    text-align: left;
 }
 
 .smaller-pill-button {
