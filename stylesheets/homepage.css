@@ -423,11 +423,9 @@ body {
     .profile-container, .about-section {
         flex-direction: column;
     }
-
     .about-text, .project-details {
         flex-grow: 1;
     }
-
     .about-image {
         margin: 0 0px;
     }
@@ -447,7 +445,6 @@ body {
         border-radius: 15%;
         width: 100%;
     }
-
     .projectInformation {
         width: 90%;
     }
@@ -459,5 +456,8 @@ body {
     }
     #no-effect-title {
         display: block; 
+    }
+    .emails h3 {
+        text-align: center;
     }
 }
