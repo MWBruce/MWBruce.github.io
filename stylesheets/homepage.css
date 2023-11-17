@@ -443,10 +443,9 @@ body {
         font-size: 1em;
     }
     .project-card {
-
         padding-bottom: 25px;
     }
-    .details {
-        width: 90%; 
+    .project-card {
+        background-color: #1a1a1a;
     }
 }
