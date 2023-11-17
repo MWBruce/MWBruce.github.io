@@ -446,6 +446,10 @@ body {
         padding-bottom: 25px;
         background-color: #1a1a1a;
         border-radius: 15%;
+        width: 100%;
+    }
+
+    .project-information {
         width: 90%;
     }
     .about-text h3 {
