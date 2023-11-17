@@ -423,7 +423,7 @@ body {
         flex-direction: column;
     }
 
-    /* .about-text, .project-details {
+    .about-text, .project-details {
         flex-grow: 1;
-    } */
+    }
 }
