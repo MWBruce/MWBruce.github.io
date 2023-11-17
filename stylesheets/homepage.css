@@ -365,6 +365,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    background-color: #1a1a1a;
 }
 
 .project-image {
