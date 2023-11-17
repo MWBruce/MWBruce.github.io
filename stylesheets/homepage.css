@@ -284,7 +284,6 @@ body {
     justify-content: center;
     width: 100%;
     background-color: transparent;
-    /* padding: 1.5em; */
     color: white;
 }
 
@@ -320,6 +319,8 @@ body {
     width: 100%;
     margin-bottom: 2em;
     padding-top: 4em;
+
+    background-color: #1a1a1a;
 }
 
 .about-image {
