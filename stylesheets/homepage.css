@@ -416,6 +416,11 @@ body {
     display: none;
 }
 
+.links h3 {
+    color: #F1FAC0;
+    font-size: 1.2em; 
+}
+
 @media screen and (max-width: 768px) {
     img {
         display: none;
