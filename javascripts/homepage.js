@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const vueinst = new Vue({
         el: '#app',
         data: {
-            name: 'A Software Engineer',
+            name: 'An Analyst',
             jobTitle: 'Maxwell Bruce',
             typedTitle: '',
             currentIndex: 0,
