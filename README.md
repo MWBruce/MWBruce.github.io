@@ -1,3 +1,4 @@
-# PortfolioWebsite
+# Portfolio Website
 
-Simple website although originally written using Node.js has been adapted to run on GitHub.
+## Description
+A simple website illustrating my professional expirience, skills and awards

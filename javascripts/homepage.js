@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!this.isDeleting) {
                     if (this.typedTitle.includes("<br>")) {
                         this.typedTitle = this.typedTitle.replace("<br>", "");
-                    }    
+                    }
                     if (this.currentIndex < this.name.length) {
                         this.typedTitle += this.name.charAt(this.currentIndex);
                         this.currentIndex++;
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         setTimeout(() => {
                             this.isDeleting = true;
                             this.typeWriter();
-                        }, 1000); 
+                        }, 1000);
                     }
                 } else {
                     if (this.currentIndex > 0) {

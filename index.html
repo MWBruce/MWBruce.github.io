@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MWB Website</title>
@@ -9,6 +11,7 @@
     <script src="javascripts/homepage.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
         <header>
@@ -43,7 +46,10 @@
                         <h1 class="title" id="effect-title" v-html="typedTitle">\n</h1>
                         <h1 class="title" id="no-effect-title">Maxwell Bruce</h1>
                         <br>
-                        <p>Welcome to my website! Here, you'll find detailed insights into my professional journey, including an overview of my public projects, experience, community involvement, and achievements in computer science. Should you wish to connect, please don't hesitate to reach out through the "Contact Me" button below!</p>
+                        <p>Welcome to my website! Here, you'll find detailed insights into my professional journey,
+                            including an overview of my public projects, experience, community involvement, and
+                            achievements in computer science. Should you wish to connect, please don't hesitate to reach
+                            out through the "Contact Me" button below!</p>
                     </div>
                 </div>
                 <div class="button-container">
@@ -61,15 +67,17 @@
                     <h3>Links:</h3>
                     <div class="button-container">
                         <div class="outside-container">
-                            <a href="https://www.linkedin.com/in/maxwell-bruce-b0a0771b1/" target="_blank" class="pill-button">LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/maxwell-bruce-b0a0771b1/" target="_blank"
+                                class="pill-button">LinkedIn</a>
                         </div>
                         <div class="outside-container">
-                            <a href="https://github.com/MWBruce" target="_blank" class="pill-button">Professional GitHub</a>
+                            <a href="https://github.com/MWBruce" target="_blank" class="pill-button">Professional
+                                GitHub</a>
                         </div>
                         <div class="outside-container">
                             <a href="https://github.com/A1766106" target="_blank" class="pill-button">Student GitHub</a>
                         </div>
-                    </div> 
+                    </div>
                 </div>
                 <div class="emails">
                     <h3>Email:</h3>
@@ -78,7 +86,7 @@
             </div>
             <!-- About information div -->
             <div class="aboutInformation" v-if="showAboutStatus">
-            
+
                 <section class="about-section left-image">
                     <img src="/images/Myself.jpg" class="about-image">
                     <div class="about-text">
@@ -88,65 +96,78 @@
                                 <strong>Intern Modelling and Analysis Engineer</strong> - SAAB (11/2023-Present):
                                 <br>
                                 <ul v-if="saabShow">
-                                    <li class="moreInformation">Developed and validated models to simulate and analyse defence systems.</li>
+                                    <li class="moreInformation">Developed and validated models to simulate and analyse
+                                        defence systems.</li>
                                     <li class="moreInformation">Utilized various machine learning algorithms.</li>
-                                    <li class="moreInformation">Used various basic electrical engineering principles.</li>
+                                    <li class="moreInformation">Used various basic electrical engineering principles.
+                                    </li>
                                 </ul>
                                 <!-- Buttons to show and hide additional information -->
                                 <div class="about-button-container">
                                     <div class="outside-container smaller-outside-container" v-if="!saabShow">
-                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="saabShowButton">Show More Information</a>
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton"
+                                            @click="saabShowButton">Show More Information</a>
                                     </div>
                                     <div class="outside-container smaller-outside-container" v-if="saabShow">
-                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="saabShowButton">Close</a>
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton"
+                                            @click="saabShowButton">Close</a>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <strong>Machine Learning Researcher</strong> - Australian Institute for Machine Learning (4/2023-Present):
+                                <strong>Machine Learning Researcher</strong> - Australian Institute for Machine Learning
+                                (4/2023-Present):
                                 <br>
                                 <ul v-if="aimlShow">
                                     <li class="moreInformation">Researched various machine learning algorithms.</li>
-                                    <li class="moreInformation">Projects worked on included SVM’s, Large Language Models, and Neural Networks.</li>
+                                    <li class="moreInformation">Projects worked on included SVM’s, Large Language
+                                        Models, and Neural Networks.</li>
                                 </ul>
                                 <!-- Buttons to show and hide additional information -->
                                 <div class="about-button-container">
                                     <div class="outside-container smaller-outside-container" v-if="!aimlShow">
-                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="aimlShowButton">Show More Information</a>
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton"
+                                            @click="aimlShowButton">Show More Information</a>
                                     </div>
                                     <div class="outside-container smaller-outside-container" v-if="aimlShow">
-                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="aimlShowButton">Close</a>
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton"
+                                            @click="aimlShowButton">Close</a>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <strong>Accountant</strong> - RJC Evans & Co Pty Ltd (4/2020–4/2023):
                                 <br>
-                                <ul  v-if="rjcShow">
-                                    <li class="moreInformation">Prepared Income Tax Returns and Financial Statements.</li>
+                                <ul v-if="rjcShow">
+                                    <li class="moreInformation">Prepared Income Tax Returns and Financial Statements.
+                                    </li>
                                     <li class="moreInformation">Corresponded with Clients.</li>
                                     <li class="moreInformation">Conducted Audits.</li>
                                 </ul>
                                 <!-- Buttons to show and hide additional information -->
                                 <div class="about-button-container">
                                     <div class="outside-container smaller-outside-container" v-if="!rjcShow">
-                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="rjcShowButton">Show More Information</a>
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton"
+                                            @click="rjcShowButton">Show More Information</a>
                                     </div>
                                     <div class="outside-container smaller-outside-container" v-if="rjcShow">
-                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton" @click="rjcShowButton">Close</a>
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton"
+                                            @click="rjcShowButton">Close</a>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </section>
-            
+
                 <section class="about-section right-image">
                     <div class="about-text">
                         <h3>Education:</h3>
                         <ul>
-                            <li>University of Adelaide - Bachelor of Computer Science with Honours – Graduating November 2024</li>
-                            <li>University of Adelaide – Bachelor of Commerce with major in Accounting and Corporate Finance – Complete</li>
+                            <li>University of Adelaide - Bachelor of Computer Science with Honours – Graduating November
+                                2024</li>
+                            <li>University of Adelaide – Bachelor of Commerce with major in Accounting and Corporate
+                                Finance – Complete</li>
                             <li>Stanford University and DeepLearning.AI – Machine Learning Specialization Course</li>
                             <li>DeepLearning.AI – Deep Learning Specialization Course</li>
                             <li>St Peters College – High School</li>
@@ -154,7 +175,7 @@
                     </div>
                     <img src="/images/CPC.png" class="about-image">
                 </section>
-            
+
                 <section class="about-section left-image">
                     <img src="/images/Meeting.png" class="about-image">
                     <div class="about-text">
@@ -165,7 +186,7 @@
                         </ul>
                     </div>
                 </section>
-            
+
                 <section class="about-section right-image">
                     <div class="about-text">
                         <h3>Community Involvements:</h3>
@@ -179,9 +200,9 @@
                     </div>
                     <img src="/images/CommitteePhoto.jpg" class="about-image">
                 </section>
-            
+
                 <section class="about-section left-image">
-                    <img src="/images/Football.jpeg" class="about-image">
+                    <img src="/images/Football2.CR2" class="about-image">
                     <div class="about-text">
                         <h3>Interests:</h3>
                         <ul>
@@ -203,64 +224,34 @@
                             <div class="project-details">
                                 <h4 class="project-title">My Portfolio Website</h4>
                                 <p class="project-description">A simple portfolio website showcasing myself.</p>
-                                <a href="https://github.com/MWBruce/PortfolioWebsite" target="_blank" class="project-link">GitHub Link</a>
-                                <p class="project-language">Language Used: HTML, CSS, JavaScript and Vue.js</p>
+                                <a href="https://github.com/MWBruce/PortfolioWebsite" target="_blank"
+                                    class="project-link">GitHub Link</a>
+                                <p class="project-language">Language Used: HTML, CSS, JavaScript and Vue</p>
                                 <span class="project-status complete">Complete</span>
                             </div>
                         </div>
-                    </li>                    
+                    </li>
                     <li class="project">
                         <div class="project-card">
                             <img src="/images/JenkinsIcon.png" alt="Jenkins DORA Plugin Icon" class="project-image">
                             <div class="project-details">
                                 <h4 class="project-title">Jenkins DORA Plugin</h4>
-                                <p class="project-description">A team project creating a plugin for Jenkins that collects all DORA metrics for development teams through the creation of a pipeline and integration of SAST tool.</p>
-                                <a href="https://github.com/BarrettBytes/DORAAndSASTMetricJenkinsPlugin" target="_blank" class="project-link">GitHub Link</a>
-                                <p class="project-language">Language Used: Java, Python, Pipeline DSL, Shell Script, PromQL and AWS CloudFormation Language</p>
+                                <p class="project-description">A team project creating a plugin for Jenkins that
+                                    collects all DORA metrics for development teams through the creation of a pipeline
+                                    and integration of SAST tool.</p>
+                                <a href="https://github.com/BarrettBytes/DORAAndSASTMetricJenkinsPlugin" target="_blank"
+                                    class="project-link">GitHub Link</a>
+                                <p class="project-language">Language Used: Java, Python, Pipeline DSL, Shell Script,
+                                    PromQL and AWS CloudFormation Language</p>
                                 <span class="project-status inprogress">In Progress</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="project">
-                        <div class="project-card">
-                            <img src="/images/pricePredictorIcon.png" alt="Price Predictor Icon" class="project-image">
-                            <div class="project-details">
-                                <h4 class="project-title">Neural Network Price Predictor</h4>
-                                <p class="project-description">A ML project which without using any machine learning libraries creates a neural network to predict the prices of shares based on quarterly reports. I am currently implementing better consideration of industries in predictions.</p>
-                                <a href="https://github.com/MWBruce/MachineLearningStockPricePrediction" target="_blank" class="project-link">GitHub Link</a>
-                                <p class="project-language">Language Used: Python</p>
-                                <span class="project-status inprogress">In Progress</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="project">
-                        <div class="project-card">
-                            <img src="/images/webScraperIcon.jpg" alt="Web Scraper Icon" class="project-image">
-                            <div class="project-details">
-                                <h4 class="project-title">Web Scraper for Stock Prices</h4>
-                                <p class="project-description">A aspect of what is planned to be a bigger project in which data is scraped quickly and efficiently on defined intervals.</p>
-                                <a href="https://github.com/MWBruce/MachineLearningStockPricePrediction" target="_blank" class="project-link">GitHub Link</a>
-                                <p class="project-language">Language Used: C++</p>
-                                <span class="project-status complete">Complete</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="project">
-                        <div class="project-card">
-                            <img src="/images/shareSimIcon.jpg" alt="Share Simulator Icon" class="project-image">
-                            <div class="project-details">
-                                <h4 class="project-title">Historical Share Simulator</h4>
-                                <p class="project-description">A project where a user through terminal prompts can buy and sell shares based on real historical data.</p>
-                                <a href="https://github.com/A1766106/ShareSimCombination" target="_blank" class="project-link">GitHub Link</a>
-                                <p class="project-language">Language Used: C++</p>
-                                <span class="project-status complete">Complete</span>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
-            
+
         </div>
     </div>
 </body>
+
 </html>
