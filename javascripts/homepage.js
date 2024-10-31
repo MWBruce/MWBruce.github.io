@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
+            // Shows my contact information
             showContactInfo() {
                 this.showIntroduction = false;
                 this.showAboutStatus = false;
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.showContactStatus = true;
                 typedTitle = '';
             },
+            // Shows my about information
             showAboutInfo() {
                 this.showIntroduction = false;
                 this.showContactStatus = false;
@@ -65,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.showAboutStatus = true;
                 typedTitle = '';
             },
+            // Shows my project info
             showProjectInfo() {
                 this.showIntroduction = false;
                 this.showContactStatus = false;
@@ -72,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.showProjectStatus = true;
                 typedTitle = '';
             },
+            // Shows the home page
             showHomePage() {
                 typedTitle = '';
                 this.typeWriter();
@@ -80,14 +84,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.showProjectStatus = false;
                 this.showIntroduction = true;
             },
+            // Shows saab more information
             saabShowButton() {
                 event.preventDefault();
                 this.saabShow = !this.saabShow;
             },
+            // Shows aiml more information
             aimlShowButton() {
                 event.preventDefault();
                 this.aimlShow = !this.aimlShow;
             },
+            // Shows RJC more information
             rjcShowButton() {
                 event.preventDefault();
                 this.rjcShow = !this.rjcShow;
