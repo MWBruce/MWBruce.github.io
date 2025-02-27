@@ -95,8 +95,28 @@
                         <h3>Work Experience:</h3>
                         <ul>
                             <li>
+                                <strong>Associate Software Engineer </strong> - Macquarie
+                                (2/2025-Present):
+                                <br>
+                                <ul v-if="saabShow">
+                                    <li class="moreInformation">Develop front office trading software utilising Python
+                                        and C++.</li>
+                                </ul>
+                                <!-- Buttons to show and hide additional information -->
+                                <div class="about-button-container">
+                                    <div class="outside-container smaller-outside-container" v-if="!saabShow">
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton"
+                                            @click="saabShowButton">Show More Information</a>
+                                    </div>
+                                    <div class="outside-container smaller-outside-container" v-if="saabShow">
+                                        <a href="#" class="pill-button smaller-pill-button" id="contactButton"
+                                            @click="saabShowButton">Close</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
                                 <strong>Software and Machine Learning Engineer </strong> - SAAB Australia
-                                (11/2023-Present):
+                                (11/2023-1/2025):
                                 <br>
                                 <ul v-if="saabShow">
                                     <li class="moreInformation">Developed and integrated various models using Python and
@@ -223,7 +243,7 @@
                     </div>
                 </section>
             </div>
-            
+
             <!-- Projects div -->
             <div class="projectInformation" v-if="showProjectStatus">
                 <ul class="projects-list">
@@ -237,6 +257,34 @@
                                     class="project-link">GitHub Link</a>
                                 <p class="project-language">Language Used: HTML, CSS, JavaScript and Vue</p>
                                 <span class="project-status complete">Complete</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project-card">
+                            <img src="/images/automated-trading-strategies.jpg" alt="Portfolio Website Icon" class="project-image">
+                            <div class="project-details">
+                                <h4 class="project-title">Automated Trading Model</h4>
+                                <p class="project-description">A automated crypto trading project I am completing.</p>
+                                <a href="https://github.com/MWBruce/TradingSystem" target="_blank"
+                                    class="project-link">GitHub Link</a>
+                                <p class="project-language">Language Used: Python and C++</p>
+                                <span class="project-status inprogress">In Progress</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project">
+                        <div class="project-card">
+                            <img src="/images/Edvance.webp" alt="Edvance Icon" class="project-image">
+                            <div class="project-details">
+                                <h4 class="project-title">Edvance Backend</h4>
+                                <p class="project-description">As teachers are currently facing an issue with students
+                                    cheating on assignments, a team mate and I are building a wrapper around an OpenAI
+                                    model which will allow teachers more control over students AI usage.</p>
+                                <a href="https://github.com/Ed-Vance/api" target="_blank" class="project-link">GitHub
+                                    Link</a>
+                                <p class="project-language">Language Used: TypeScript</p>
+                                <span class="project-status inprogress">In Progress</span>
                             </div>
                         </div>
                     </li>
